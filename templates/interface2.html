@@ -1,0 +1,60 @@
+
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Auto Essay</title>
+    <meta name="description" content="The HTML5 Herald">
+    <meta name="author" content="SitePoint">
+
+    <style>
+        html,
+        body {
+            min-height: 100%;
+            background-image: url('https://i.pinimg.com/originals/df/a5/9c/dfa59cc952478f5aa96b27c6835bd74d.jpg');
+        }
+
+        textarea {
+            margin-left: 19%;
+            margin-top: 15px;
+            padding: 60px 80px 100px 80px;
+            width: 850px;
+            background-color: #fff;
+            -moz-box-shadow: 0px 0px 6px #333;
+            -webkit-box-shadow: 0px 0px 6px #333;
+            box-shadow: 0px 0px 6px #333;
+            border: 3px solid rgb(241, 188, 89);
+            font-size: 16px;
+            line-height: 28px;  
+            font-family: times, serif;
+            min-height: 900px;
+            margin-bottom: 50px;
+            text-indent: 50px;
+            resize: none;
+            font-style: unset;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <textarea name="" id="window" cols="30" rows="10">
+
+An introduction to {{topic}}
+Written by: enter name here
+
+
+        {{ content }}
+    
+(word count: {{cont}})
+    </textarea>
+
+    <script>
+        document.getElementsById('window').innerHTML = val;
+    </script>
+
+</body>
