@@ -113,3 +113,8 @@ def soccer(topic, lang, plag):
 @app.route('/contact')
 def contact():
     return render_template('interface4.html')
+
+
+
+if __name__ == '__main__':
+    app.run(debug=True)
