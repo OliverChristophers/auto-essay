@@ -8,7 +8,6 @@ from flask import Flask, url_for, render_template, request
 from markupsafe import escape
 
 
-
 options = webdriver.ChromeOptions()
 options.headless = True
 options.add_argument("--window-size=1920,1080")
