@@ -8,7 +8,6 @@ from bs4 import BeautifulSoup
 
 app = Flask(__name__)   
 
-
 @app.route('/')
 def football():
     return render_template('interface.html')
