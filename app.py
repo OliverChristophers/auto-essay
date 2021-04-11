@@ -55,7 +55,7 @@ def soccer(topic, lang, plag):
             win = -1
             for i in text1:
                 win += 1
-                if win % 8 == 0:
+                if win % 6 == 0:
                     try:
                         nums = 0
                         for x in i:
@@ -64,23 +64,35 @@ def soccer(topic, lang, plag):
                         if nums <= 3:
                             pass
                         else:
-                            page1 = requests.get(f'https://www.thesaurus.com/browse/{i}')
-                            soup = BeautifulSoup(page1.content, 'html.parser')
+                            if lang == 'en':
+                                page1 = requests.get(f'https://www.thesaurus.com/browse/{i}')
+                                soup = BeautifulSoup(page1.content, 'html.parser')
 
 
-                            pi = soup.find('div', id='meanings').get_text()
+                                pi = soup.find('div', id='meanings').get_text()
 
 
-                            new_pi = pi.split('RELEVANT')
+                                new_pi = pi.split('RELEVANT')
 
-                            pie = ''
-                            for c in new_pi:
-                                pie += c
+                                pie = ''
+                                for c in new_pi:
+                                    pie += c
 
-                            ULTRAnew_pi = c.split()
+                                ULTRAnew_pi = c.split()
 
-                            click = ULTRAnew_pi[0]
-                            text1[win] = click
+                                click = ULTRAnew_pi[0]
+                                text1[win] = click
+                            
+                            if lang == 'sv':
+                                page2 = requests.get(f'https://www.synonymer.se/sv-syn/{i}')
+                                soup = BeautifulSoup(page2.content, 'html.parser')
+
+                                z = soup.find('div', class_='body').get_text()
+
+                                spli = z.split()
+                                solit = spli.split(',')
+                                text1[win] = solit[0]
+
 
                     except:
                         pass
