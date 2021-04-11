@@ -55,7 +55,7 @@ def soccer(topic, lang, plag):
             win = -1
             for i in text1:
                 win += 1
-                if win % 6 == 0:
+                if win % 7 == 0:
                     try:
                         nums = 0
                         for x in i:
